@@ -12,14 +12,6 @@ header ('Content-type: text/html; charset=UTF-8');
 
 include 'cliente.php';
 
-if (isset($_GET['asc'])) {
-  ksort($cliente);
-}
-
-if (isset($_GET['desc'])) {
-  krsort($cliente);
-}
-
 /*if (isset($_GET['alf'])) {
   asort($cliente);
 }*/
@@ -114,6 +106,14 @@ $cliente[10]->setIdade(29);
 $cliente[10]->setCpf('677.108.009-38');
 $cliente[10]->setEndereco('Rua 2 de Fevereiro');
 $cliente[10]->setTelefone('1123-5455');
+
+if (isset($_GET['asc'])) {
+  ksort($cliente);
+}
+
+if (isset($_GET['desc'])) {
+  krsort($cliente);
+}
 ?>
 
 <table class="table table-bordered">
