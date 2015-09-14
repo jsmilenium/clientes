@@ -10,7 +10,7 @@
 
 header ('Content-type: text/html; charset=UTF-8');
 
-include 'cliente.php';
+include 'Cliente.php';
 
 /*if (isset($_GET['alf'])) {
   asort($cliente);
