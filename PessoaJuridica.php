@@ -1,28 +1,23 @@
 <?php
 
-class PessoaJuridica extends Cliente implements GrauImportancia{
+include 'PJInterface.php';
 
-    private $cnpj;
-    private $tipo;
-
-    public function getCnpj(){
-            return $this->cnpj;
+class PessoaJuridica extends Cliente implements PJInterface{
+    
+    public function getCNPJ() {
+        return $this->cnpj;
     }
-
-    public function setCnpj($cnpj){
-            $this->cnpj = $cnpj;
+    
+    public function setCNPJ($cnpj) {
+        $this->cnpj = $cnpj;
     }
-
+    
     public function getTipo(){
             return $this->tipo;
     }
 
     public function setTipo($tipo){
             $this->tipo = $tipo;
-    }
-    
-    public function classificaGrau($valor) {
-        return $valor;
     }
 	
 }
