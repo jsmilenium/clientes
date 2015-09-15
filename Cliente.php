@@ -1,8 +1,9 @@
 <?php
 
 include 'EnderecoCobranca.php';
+include 'GrauImportancia.php';
 
-Class Cliente implements EnderecoCobranca{
+Class Cliente implements EnderecoCobranca, GrauImportancia{
 
     public $nome;
     public $idade;
@@ -44,7 +45,11 @@ Class Cliente implements EnderecoCobranca{
     public function enderecoCobranca($endereco) {
         return $endereco;
     }
-	
+
+    public function classificaGrau($valor) {
+        return $valor;
+    }
+    
 }
 
 ?>
