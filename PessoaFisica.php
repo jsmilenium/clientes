@@ -1,18 +1,15 @@
 <?php
 
-include 'GrauImportancia.php';
+include 'PFInterface.php';
 
-class PessoaFisica extends Cliente  implements GrauImportancia{
+class PessoaFisica extends Cliente implements PFInterface{
 
-    private $cpf;
-    private $tipo;
-
-    public function getCpf(){
-            return $this->cpf;
+    public function getCPF() {
+        return $this->cpf;
     }
-
-    public function setCpf($cpf){
-            $this->cpf = $cpf;
+    
+    public function setCPF($cpf) {
+        $this->cpf = $cpf;
     }
 
     public function getTipo(){
@@ -21,10 +18,6 @@ class PessoaFisica extends Cliente  implements GrauImportancia{
 
     public function setTipo($tipo){
             $this->tipo = $tipo;
-    }
-    
-    public function classificaGrau($valor) {
-        return $valor;
     }
 	
 }
